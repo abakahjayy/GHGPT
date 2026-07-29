@@ -17,6 +17,7 @@ import Homepage from "./routes/homePage/Homepage.jsx"
 import Dashboard from "./routes/dashboardPage/Dashboard.jsx";
 import ChatPage from "./routes/chatPage/Chatpage1.jsx";
 import Control from "./pages/ControlElectrical/Control.jsx";
+import GoogleCallback from "./pages/Authpage/GoogleCallback.jsx";
 
 export default function App(){
     const showToast = useShowToast()
@@ -70,6 +71,10 @@ export default function App(){
 
 
     const router = createBrowserRouter([
+         {
+            path: '/auth/callback',
+            element: <GoogleCallback />,
+        },
         {
             path: '/dashboard',
             element: (
